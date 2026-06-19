@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CHESS</title>
+        <link rel="Icon" type="image/png" href="./Pieces/White Knight.svg">
+        <link rel="stylesheet" href="index.css">
+        <script src="firebase.js" type="module"></script>
+    </head>
+    <body>
+        <h1 id="page-title">CHESSPOSE</h1>
+        
+        <div id="change-pos-div">
+            <h3 class="middle-text">포지션 설정</h3>
+            <div id="chessboard">
+                <div class="square-light square"><img id="piece-1" src="./Pieces/Black Rook.svg" alt="Black Piece" class="piece" data-piece-type="r" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-2" src="./Pieces/Black Knight.svg" alt="Black Piece" class="piece" data-piece-type="n" draggable="true"></div>
+                <div class="square-light square"><img id="piece-3" src="./Pieces/Black Bishop.svg" alt="Black Piece" class="piece" data-piece-type="b" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-4" src="./Pieces/Black Queen.svg" alt="Black Piece" class="piece" data-piece-type="q" draggable="true"></div>
+                <div class="square-light square"><img id="piece-5" src="./Pieces/Black King.svg" alt="Black Piece" class="piece" data-piece-type="k" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-6" src="./Pieces/Black Bishop.svg" alt="Black Piece" class="piece" data-piece-type="b" draggable="true"></div>
+                <div class="square-light square"><img id="piece-7" src="./Pieces/Black Knight.svg" alt="Black Piece" class="piece" data-piece-type="n" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-8" src="./Pieces/Black Rook.svg" alt="Black Piece" class="piece" data-piece-type="r" draggable="true"></div>
+
+                <div class="square-dark square"><img id="piece-9" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-light square"><img id="piece-10" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-11" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-light square"><img id="piece-12" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-13" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-light square"><img id="piece-14" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-15" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+                <div class="square-light square"><img id="piece-16" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece" data-piece-type="p" draggable="true"></div>
+
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+            
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+                <div class="square-dark square"></div>
+                <div class="square-light square"></div>
+            
+                <div class="square-light square"><img id="piece-17" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-18" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-light square"><img id="piece-19" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-20" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-light square"><img id="piece-21" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-22" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-light square"><img id="piece-23" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-24" src="./Pieces/White Pawn.svg" alt="Black Piece" class="piece" data-piece-type="P" draggable="true"></div>
+
+                <div class="square-dark square"><img id="piece-25" src="./Pieces/White Rook.svg" alt="Black Piece" class="piece" data-piece-type="R" draggable="true"></div>
+                <div class="square-light square"><img id="piece-26" src="./Pieces/White Knight.svg" alt="Black Piece" class="piece" data-piece-type="N" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-27" src="./Pieces/White Bishop.svg" alt="Black Piece" class="piece" data-piece-type="B" draggable="true"></div>
+                <div class="square-light square"><img id="piece-28" src="./Pieces/White Queen.svg" alt="Black Piece" class="piece" data-piece-type="Q" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-29" src="./Pieces/White King.svg" alt="Black Piece" class="piece" data-piece-type="K" draggable="true"></div>
+                <div class="square-light square"><img id="piece-30" src="./Pieces/White Bishop.svg" alt="Black Piece" class="piece" data-piece-type="B" draggable="true"></div>
+                <div class="square-dark square"><img id="piece-31" src="./Pieces/White Knight.svg" alt="Black Piece" class="piece" data-piece-type="N" draggable="true"></div>
+                <div class="square-light square"><img id="piece-32" src="./Pieces/White Rook.svg" alt="Black Piece" class="piece" data-piece-type="R" draggable="true"></div>
+            </div>
+
+            <div id="new-piece-parent">
+                <div id="new-piece">
+                    <div class="new-piece"><img id="new-1" src="./Pieces/Black King.svg" alt="Black Piece" class="piece original-piece" data-piece-type="k" draggable="true"></div>
+                    <div class="new-piece"><img id="new-2" src="./Pieces/Black Queen.svg" alt="Black Piece" class="piece original-piece" data-piece-type="q" draggable="true"></div>
+                    <div class="new-piece"><img id="new-3" src="./Pieces/Black Rook.svg" alt="Black Piece" class="piece original-piece" data-piece-type="r" draggable="true"></div>
+                    <div class="new-piece"><img id="new-4" src="./Pieces/Black Knight.svg" alt="Black Piece" class="piece original-piece" data-piece-type="n" draggable="true"></div>
+                    <div class="new-piece"><img id="new-5" src="./Pieces/Black Bishop.svg" alt="Black Piece" class="piece original-piece" data-piece-type="b" draggable="true"></div>
+                    <div class="new-piece"><img id="new-6" src="./Pieces/Black Pawn.svg" alt="Black Piece" class="piece original-piece" data-piece-type="p" draggable="true"></div>
+                    <div class="new-piece"><img id="new-7" src="./Pieces/White King.svg" alt="White Piece" class="piece original-piece" data-piece-type="K" draggable="true"></div>
+                    <div class="new-piece"><img id="new-8" src="./Pieces/White Queen.svg" alt="White Piece" class="piece original-piece" data-piece-type="Q" draggable="true"></div>
+                    <div class="new-piece"><img id="new-9" src="./Pieces/White Rook.svg" alt="White Piece" class="piece original-piece" data-piece-type="R" draggable="true"></div>
+                    <div class="new-piece"><img id="new-10" src="./Pieces/White Knight.svg" alt="White Piece" class="piece original-piece" data-piece-type="N" draggable="true"></div>
+                    <div class="new-piece"><img id="new-11" src="./Pieces/White Bishop.svg" alt="White Piece" class="piece original-piece" data-piece-type="B" draggable="true"></div>
+                    <div class="new-piece"><img id="new-12" src="./Pieces/White Pawn.svg" alt="White Piece" class="piece original-piece" data-piece-type="P" draggable="true"></div>
+                </div>
+            </div>
+
+            <div id="board-manage">
+                <button id="clearBoard">체스판 비우기</button><button id="resetBoard">체스판 초기화</button>
+            </div>
+        </div>
+        
+        <hr>
+        <div id="manage-fen">
+            <h3 class="middle-text">포지션 FEN</h3>
+            <input type="text" size="45" id="fen-input" placeholder="FEN 코드를 입력하세요">
+            <button id="loadFen">불러오기</button>
+
+            <h3 class="middle-text">현재 포지션</h3>
+            <p id="current-fen">rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR</p>
+            <button id="copy-fen">FEN 복사하기</button>
+        </div>
+
+        <hr>
+       
+        <h3 class="middle-text">글 작성</h3>
+        <div id="new-post">
+            <!-- <label>제목</label> -->
+            <input type="text" id="post-title" placeholder="제목을 입력하세요">
+            <!-- <label>내용</label> -->
+            <textarea id="post-content" placeholder="내용을 입력하세요"></textarea>
+            <button id="upload-post">글 작성</button>
+        </div>
+
+        <hr>
+        <button id="find-post">이 포지션의 글 확인하기</button>
+
+
+        <div id="select-post-mode-parent" hidden>
+            <div id="select-post-mode">
+                <p id="post-mode-text">글 표시 순서</p>
+                <input type="radio" id="new" name="post-mode" value="new" checked>
+                <label for="new">최신순</label>
+                <input type="radio" id="old" name="post-mode" value="old">
+                <label for="old">오래된순</label>
+            </div>
+            
+        </div>
+        
+        <div id="post-display"></div>
+
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
